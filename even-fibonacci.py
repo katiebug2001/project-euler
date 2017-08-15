@@ -24,21 +24,22 @@ def even_fibonacci(up_to):
 
     return sum(even_fibs)
 print(even_fibonacci(4000000))
-# class test_even_fibonacci(unittest.TestCase):
-#     """
-#     tests even_fibonacci()
-#     """
-#
-#     def test_different_up_to(self):
-#         """
-#         tests the sum of even fibonaccis when taken up to different numbers
-#         """
-#         test_up_to = [1, 2, 10, 50, 55, 700, 350000]
-#         test_even_fib = []
-#         for n in test_up_to:
-#             test_even_fib.append(even_fibonacci(n))
-#         self.assertEqual([0, 2, 10, 44, 44, 798, 257114], test_even_fib)
-#
-#
-# if __name__ == '__main__':
-#     unittest.main()
+
+class test_even_fibonacci(unittest.TestCase):
+    """
+    tests even_fibonacci()
+    """
+
+    def test_different_up_to(self):
+        """
+        tests the sum of even fibonaccis when taken up to different numbers
+        """
+        test_up_to = [1, 2, 10, 50, 55, 700, 350000]
+        test_even_fib = []
+        for n in test_up_to:
+            test_even_fib.append(even_fibonacci(n))
+        self.assertEqual([0, 2, 10, 44, 44, 798, 257114], test_even_fib)
+
+
+if __name__ == '__main__':
+    unittest.main()
